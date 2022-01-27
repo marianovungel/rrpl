@@ -7,7 +7,7 @@ const RouterSobre = require('./routes/sobre.routes')
 const RouterPost = require('./routes/post.routes')
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/wsconection', console.log("sucesse conection"));
+mongoose.connect('mongodb://localhost:27017/wsconection', console.log("sucess conection"));
 
 app.use(bodyParser.json())
 app.use(morgan())
