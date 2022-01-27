@@ -1,0 +1,24 @@
+{
+  "name": "back-rrpl",
+  "version": "1.0.0",
+  "description": "back para rrpl project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Mariano António Vunge",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
