@@ -5,9 +5,10 @@ const morgan = require('morgan')
 const RoterGladiador = require('./routes/gladiador.routes')
 const RouterSobre = require('./routes/sobre.routes')
 const RouterPost = require('./routes/post.routes')
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://projetocasaviva:TOmHxJblWZSadPCL@cluster0.6cwlr.mongodb.net/rrplm?retryWrites=true&w=majority", {
+mongoose.connect(process.env.URL_MONGDB, {
      useNewUrlParser: true,
      useUnifiedTopology: true
 })
@@ -19,4 +20,5 @@ app.use("/sobre", RouterSobre)
 app.use("/post", RouterPost)
 app.get("/", (req, res)=>{res.send(`<h1>Start Project</h1>`)})
 
-app.listen("8000", console.log("start project"))
+const PORT = process.env.PORT;
+app.listen(PORT, console.log("start project"))
